@@ -1,0 +1,28 @@
+<!--Tataranni Marco-->
+<button (click)="mostralogin()">LOGIN</button>
+
+<button (click)="mostraregistrazione()">REGISTRAZIONE</button>
+
+<div *ngIf="showlogin">
+LOGIN<br>
+  user:
+  <input type="text" #user><br>
+  password:
+  <input type="text" #psw><br>
+  <button (click)="LogIn(user, psw)">LOGIN</button>
+</div>
+
+<div *ngIf="showregistrazione">
+  REGISTRAZIONE<br>
+  nome:
+  <input type="text" #nnome><br>
+  cognome:
+  <input type="text" #ncognome><br>
+  email:
+  <input type="text" #nemail><br>
+  password:
+  <input type="text" #npsw><br>
+  citta:
+  <input type="text" #ncitta><br>
+  <button (click)="Registrazione(nnome, ncognome, nemail, npsw, ncitta)">Registrati</button>
+</div>
