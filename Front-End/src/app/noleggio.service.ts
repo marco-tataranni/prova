@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 //Tataranni Marco
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Utente } from './utente.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,5 +24,6 @@ export class NoleggioService {
     return obsLogIn;
  //Ritorno un observable ai componenti che richiedono il servizio
   }
+
 
 }

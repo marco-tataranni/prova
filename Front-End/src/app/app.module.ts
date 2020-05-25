@@ -5,16 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccessoComponent } from './accesso/accesso.component';
-
+import { ScannerComponent } from './scanner/scanner.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 @NgModule({
   declarations: [
     AppComponent,
-    AccessoComponent
+    AccessoComponent,
+    ScannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ZXingScannerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

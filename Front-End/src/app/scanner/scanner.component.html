@@ -1,0 +1,7 @@
+<div>
+  <zxing-scanner (scanSuccess)="onCodeResult($event)" ></zxing-scanner>
+</div>
+<div *ngIf="qrResultString">
+  <p>{{ qrResultString }}</p>
+</div>
+

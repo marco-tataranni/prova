@@ -1,8 +1,9 @@
 <!--Tataranni Marco-->
-<button (click)="mostralogin()">LOGIN</button>
+<div *ngIf="showbutton">
+  <button  (click)="mostralogin()">LOGIN</button>
 
-<button (click)="mostraregistrazione()">REGISTRAZIONE</button>
-
+  <button (click)="mostraregistrazione()">REGISTRAZIONE</button>
+</div>
 <div *ngIf="showlogin">
 LOGIN<br>
   user:
@@ -10,6 +11,7 @@ LOGIN<br>
   password:
   <input type="text" #psw><br>
   <button (click)="LogIn(user, psw)">LOGIN</button>
+
 </div>
 
 <div *ngIf="showregistrazione">
@@ -25,4 +27,7 @@ LOGIN<br>
   citta:
   <input type="text" #ncitta><br>
   <button (click)="Registrazione(nnome, ncognome, nemail, npsw, ncitta)">Registrati</button>
+
 </div>
+<p *ngIf="risposta">{{risposta}}</p>
+<app-scanner *ngIf="showscanner"></app-scanner>
